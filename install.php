@@ -4,7 +4,7 @@ print 'Running ...';
 system('sudo apt-get install python3');
 system('clear');
 $secret = readline('secret : ');
-$port = (int) readline('port : ');
+$port = readline('port : ');
 $tag = readline('tag : ');
 $tls = readline('tls : ');
 system('clear');
