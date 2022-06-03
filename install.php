@@ -12,7 +12,7 @@ print 'Running ...';
 try {
 system('curl -o MTProo.sh -L https://git.io/fjo34');
 $ok = 'echo -e "'.$port.'\nMTProo\n1\n'.$secret.'\nn\nn\n3\ny\n'.$tag.'\n'.$tls.'\n\n" | bash MTProo.sh';
-$proxy = system('echo -e "443\nMTProo\n1\n01010101010101010101010101010101\nn\nn\n3\ny\n106b1fbbd9e008d7edb77dcef5504b96\nlib.arvancloud.com\n\n" | bash MTProo.sh');
+$proxy = system('echo -e 443\nMTProo\n1\n01010101010101010101010101010101\nn\nn\n3\ny\n106b1fbbd9e008d7edb77dcef5504b96\nlib.arvancloud.com\n\n | bash MTProo.sh');
 preg_match('~proxy?server=(?:[\w|\.\-]+)&port=\d+&secret=.+$~i', $proxy, $match);
 print 'Proxy : https://t.me/'.$match[0];
 } catch (\Throwable $e) {
