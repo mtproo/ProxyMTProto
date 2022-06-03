@@ -18,7 +18,6 @@ try {
 system('sudo systemctl start mtprotoproxy');
 system('echo -n "2\ny" | bash MTProo.sh');
 system('echo -n "9\ny" | bash MTProo.sh');
+system('clear');
 $proxy = system('echo 1 | bash MTProo.sh');
-//preg_match('~proxy?server=(?:[\w|\.\-]+)&port=\d+&secret=.+$~i', $proxy, $match);
-print 'Proxy : '.$proxy;
 ?>
