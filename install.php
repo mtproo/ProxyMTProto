@@ -4,7 +4,7 @@ print 'Running ...';
 system('sudo apt-get install python3');
 system('clear');
 $secret = /*readline('secret : ')*/'01010101010101010101010101010101';
-$port = /*readline('port : ')*/'443';
+$port = /*readline('port : ')*/'';
 $tag = /*readline('tag : ')*/'106b1fbbd9e008d7edb77dcef5504b96';
 $tls = /*readline('tls : ')*/'lib.arvancloud.com';
 system('clear');
