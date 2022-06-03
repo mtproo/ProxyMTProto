@@ -19,7 +19,8 @@ system('curl -o MTProo.sh -L https://git.io/fjo34');
  print 'echo -e "'.$port.'\nMTProo\n1\n'.$secret.'\nn\nn\n3\ny\n'.$tag.'\n'.$tls.'\n\n" | bash MTProo.sh';
 print $e->getMessage();
  }
+/*
 system('sudo systemctl start mtprotoproxy');
 system('echo -e "2\ny" | bash MTProo.sh');
-system('echo -e "9\ny" | bash MTProo.sh');
+system('echo -e "9\ny" | bash MTProo.sh');*/
 ?>
