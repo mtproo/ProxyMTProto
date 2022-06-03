@@ -12,13 +12,13 @@ print 'Running ...';
 try {
 system('curl -o MTProo.sh -L https://git.io/fjo34');
 $ok = "echo -n '$port\nMTProo\n1\n$secret\nn\nn\n3\ny\n$tag\n$tls\n\n' | bash MTProo.sh";
-exec($ok, $proxy);
+$proxy = shell_exec($ok);
 //preg_match('~proxy?server=(?:[\w|\.\-]+)&port=\d+&secret=.+$~i', $proxy, $match);
 print 'Proxy : '.$proxy;
 } catch (\Throwable $e) {
 print $e->getMessage();
 }
 system('sudo systemctl start mtprotoproxy');
-system('echo -e "2\ny" | bash MTProo.sh');
-system('echo -e "9\ny" | bash MTProo.sh');
+system('echo -n "2\ny" | bash MTProo.sh');
+system('echo -n "9\ny" | bash MTProo.sh');
 ?>
