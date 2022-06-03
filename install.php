@@ -10,15 +10,15 @@ $tls = readline('tls : ');
 system('clear');
 print 'Running ...';
 try {
-system('curl -o MTProo.sh -L https://git.io/fjo34');
-$ok = "echo -n '$port\nMTProo\n1\n$secret\nn\nn\n3\ny\n$tag\n$tls\n\n' | bash MTProo.sh";
-$proxy = shell_exec($ok);
-//preg_match('~proxy?server=(?:[\w|\.\-]+)&port=\d+&secret=.+$~i', $proxy, $match);
-print 'Proxy : '.$proxy;
+  system('curl -o MTProo.sh -L https://git.io/fjo34');
+  system("echo -n '$port\nMTProo\n1\n$secret\nn\nn\n3\ny\n$tag\n$tls\n\n' | bash MTProo.sh");
 } catch (\Throwable $e) {
-print $e->getMessage();
+  print $e->getMessage();
 }
 system('sudo systemctl start mtprotoproxy');
 system('echo -n "2\ny" | bash MTProo.sh');
 system('echo -n "9\ny" | bash MTProo.sh');
+system('echo 1 | bash MTProo.sh', $proxy);
+//preg_match('~proxy?server=(?:[\w|\.\-]+)&port=\d+&secret=.+$~i', $proxy, $match);
+print 'Proxy : '.$proxy;
 ?>
